@@ -6,7 +6,7 @@ pipeline {
     agent any
 
     environment {        
-        NEXUSPASS = credentials('nexuspass')
+        NEXUS_PASS = credentials('nexuspass')
     }
 
     stages {
@@ -41,7 +41,7 @@ pipeline {
 			    disableHostKeyChecking: true,
                 extraVars   : [
                    	USER: "admin",
-                    PASS: "${NEXUSPASS}",
+                    PASS: "${NEXUS_PASS}",
 			        nexusip: "172.31.20.218",
 			        reponame: "vprofile-release",
 			        groupid: "QA",
