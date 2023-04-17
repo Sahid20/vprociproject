@@ -91,7 +91,7 @@ pipeline {
                 )
             }
         }
- stage('Ansible Deploy to staging'){
+ stage('Ansible Deploy to Staging'){
             steps {
                 ansiblePlaybook([
                 inventory   : 'ansible/stage.inventory',
